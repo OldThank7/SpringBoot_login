@@ -1,0 +1,32 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: knife4j
+  evtools:
+    restart:
+      enabled: true  #???????
+      additional-paths: src/main/java #????
+  mvc:
+    pathmatch:
+      matching-strategy=ant-path-matcher: ant-path-matcher
+  datasource:
+    username: oldthank
+    password: XieOrWu0507
+    url: jdbc:mysql://rm-7xvk9l1sa9nbh2z4kxo.mysql.rds.aliyuncs.com:3306/springsecurity?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  druid:
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+
