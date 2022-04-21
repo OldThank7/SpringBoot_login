@@ -1,13 +1,15 @@
 package com.oldthank.utils.Result;
 
+import com.alibaba.fastjson2.JSON;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.http.HttpStatus;
 
 import java.io.Serializable;
-
-@Data
+@Getter
+@Setter
 @ApiModel(value = "返回结果实体类", description = "结果实体类")
 public class Result implements Serializable {
 
@@ -68,5 +70,11 @@ public class Result implements Serializable {
     Result result = new Result();
     result.setResultCode(resultCode);
     return result;
+  }
+
+  @Override
+  public String toString() {
+    String string = JSON.toJSONString(super.toString());
+    return string;
   }
 }

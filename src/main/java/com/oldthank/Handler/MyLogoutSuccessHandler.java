@@ -17,8 +17,8 @@ public class MyLogoutSuccessHandler implements LogoutSuccessHandler {
 	@Override
 	public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
 		HttpSession session = request.getSession();
-		System.out.println("session = " + session);
 
+		System.out.println("session = " + session);
 
 		if (session != null){
 			Map<String,Object> map = new HashMap<>();

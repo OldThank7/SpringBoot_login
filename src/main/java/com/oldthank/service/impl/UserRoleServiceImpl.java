@@ -1,9 +1,9 @@
 package com.oldthank.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.oldthank.entity.UserRole;
 import com.oldthank.mapper.UserRoleMapper;
 import com.oldthank.service.IUserRoleService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

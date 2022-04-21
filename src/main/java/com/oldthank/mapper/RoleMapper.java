@@ -1,7 +1,7 @@
 package com.oldthank.mapper;
 
-import com.oldthank.entity.Role;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.oldthank.entity.Role;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

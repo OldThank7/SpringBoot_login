@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.oldthank.entity.Role;
 import io.swagger.annotations.ApiModel;
 import lombok.*;
 import lombok.experimental.Accessors;
@@ -32,7 +31,6 @@ import java.util.*;
 @TableName("user")
 @ApiModel(value="用户", description="")
 public class User implements Serializable, UserDetails {
-
     private static final long serialVersionUID = 1L;
 
     @TableId(value = "id", type = IdType.AUTO)

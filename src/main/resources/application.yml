@@ -4,6 +4,13 @@ server:
 spring:
   application:
     name: knife4j
+  knife4j:
+    production: true
+    basic:
+      enable: true
+      username: admin
+      password: admin
+      cors: true
   evtools:
     restart:
       enabled: true  #???????

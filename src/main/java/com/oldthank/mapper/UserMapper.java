@@ -1,8 +1,8 @@
 package com.oldthank.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.oldthank.entity.Role;
 import com.oldthank.entity.User;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

@@ -2,11 +2,11 @@ package com.oldthank.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.oldthank.entity.Role;
 import com.oldthank.entity.User;
 import com.oldthank.mapper.UserMapper;
 import com.oldthank.service.IUserService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

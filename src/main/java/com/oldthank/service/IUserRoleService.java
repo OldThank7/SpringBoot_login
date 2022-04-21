@@ -1,7 +1,7 @@
 package com.oldthank.service;
 
-import com.oldthank.entity.UserRole;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.oldthank.entity.UserRole;
 
 /**
  * <p>
