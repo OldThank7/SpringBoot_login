@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oldthank.mapper.UserMapper">
+    
+    <!-- 开启二级缓存 -->
+<!--    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>-->
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.oldthank.entity.User">
+        <id column="id" property="id" />
+        <result column="username" property="username" />
+        <result column="password" property="password" />
+        <result column="enabled" property="enabled" />
+        <result column="accountNonExpired" property="accountNonExpired" />
+        <result column="accountNonLocked" property="accountNonLocked" />
+        <result column="credentialsNonExpired" property="credentialsNonExpired" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, username, password, enabled, accountNonExpired, accountNonLocked, credentialsNonExpired
+    </sql>
+    <select id="getUserById" resultType="com.oldthank.entity.User">
+        select * from user where username=#{username}
+    </select>
+    <select id="getByUid" resultType="com.oldthank.entity.Role">
+        select r.id,r.name,r.name_zh
+        from role r,user_role ur
+        where r.id = ur.rid
+          and ur.uid = #{uid}
+    </select>
+
+</mapper>

@@ -2,7 +2,7 @@ package com.oldthank.utils.Result;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -52,5 +52,13 @@ public class GlobalExceptionHandler {
     	logger.error("未知异常！原因是:",e);
        	return ResultBody.error(CommonEnum.INTERNAL_SERVER_ERROR);
     }
+
+	//BadCredentialsException
+	@ExceptionHandler(value = BadCredentialsException.class)
+	@ResponseBody
+	public ResultBody exceptionHandler(HttpServletRequest req, BadCredentialsException e){
+		logger.error("未知异常！原因是:",e);
+		return ResultBody.error(CommonEnum.BADCREDENTIALSEXCEPTION);
+	}
 }
 
