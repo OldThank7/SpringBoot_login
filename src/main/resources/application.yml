@@ -8,3 +8,13 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://rm-7xvk9l1sa9nbh2z4kxo.mysql.rds.aliyuncs.com:3306/springsecurity?characterEncoding=utf8
+
+#jwt
+jwt:
+  header: authorization
+  # 令牌前缀
+  token-start-with: OldThank
+  # 使用Base64对该令牌进行编码
+  base64-secret: zdQ4czkV2csPXmCBWTDZPs7ifQPKfRG9XWp74PmbkULF9yL1ye7Wt0o65XTYGTXUYXy94Zwu1y2a6
+  # 令牌过时时间 此处单位/毫秒
+  token-validity-in-seconds: 86400000
